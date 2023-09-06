@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
+  <title>Poke Memory Game</title>
+</head>
+
+<body>
+  <header>
+    <h1>Poke Memory Game</h1>
+  </header>
+  <main>
+    <div class="container">
+      <div class="info-game">
+        <div>Total points: <span class="info-game__total">0</span></div>
+        <div>Round: <span class="info-game__round">1</span></div>
+        <div class="hide"><span class="info-game__multiplier">x1</span></div>
+        <div>Fails: <span class="info-game__fails">0</span></div>
+      </div>
+      <div class="game-board">
+      </div>
+    </div>
+  </main>
+  <div class="modal-generations show">
+    <form class="form-generations">
+      <h2>Select Generation to Play</h2>
+      <div class="form-generations__div">
+        <input type="radio" class="form-generations__input" id="generation1" name="generation" value="generation1" />
+        <label for="generation1">1st Generation</label>
+        <input type="radio" class="form-generations__input" id="generation2" name="generation" value="generation2" />
+        <label for="generation1">2nd Generation</label>
+        <input type="radio" class="form-generations__input" id="generation9" name="generation" value="generation9" />
+        <label for="generation9">9th Generation</label>
+      </div>
+      <input type="submit" value="Continue" class="form-generations__submit" />
+    </form>
+  </div>
+  <div class="modal-difficulty">
+    <form class="form-difficulty">
+      <label for="difficulty" class="form-difficulty__label">Select Difficulty</label>
+      <select name="difficulty" id="difficulty" class="form-difficulty__select">
+        <option value="easy">Easy</option>
+        <option value="normal">Normal</option>
+        <option value="hard">Hard</option>
+      </select>
+      <input type="submit" value="Start" class="form-difficulty__submit" />
+    </form>
+  </div>
+  <div class="modal-round">
+    <h2>¡¡HAS GANADO!!</h2>
+    <div class="info-win"></div>
+    <button id="info-win__button">JUGAR DE NUEVO</button>
+  </div>
+  <div class="modal-final">
+    <h2>PUNTUACIÓN FINAL</h2>
+    <table class="modal-final__table">
+      <thead>
+        <tr>
+          <th>Round</th>
+          <th>Score</th>
+        </tr>
+      </thead>
+      <tbody class="modal-final__table__tbody">
+      </tbody>
+      <tfoot class="modal-final__table__tfoot">
+      </tfoot>
+    </table>
+  </div>
+  <script src="js/scripts.js"></script>
+</body>
+
+</html>
